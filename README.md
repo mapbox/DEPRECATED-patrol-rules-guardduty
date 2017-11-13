@@ -1,5 +1,7 @@
 ### We are in a private beta with GuardDuty. Everything in this repo is under an NDA.
 
+[![Build Status](https://travis-ci.com/mapbox/patrol-rules-guardduty.svg?token=HxVxtqNTNCeG9q7L4aWp&branch=dispatch)](https://travis-ci.com/mapbox/patrol-rules-guardduty)
+
 # Patrol Rules GuardDuty
 These are [patrol rules](https://github.com/mapbox/patrol) for GuardDuty, which sends the alerts you want to PagerDuty. Patrol is part of Mapbox's security framework.
 
