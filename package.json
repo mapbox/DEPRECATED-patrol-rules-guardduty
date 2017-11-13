@@ -1,0 +1,28 @@
+{
+  "name": "patrol-rules-guardduty",
+  "version": "0.0.0",
+  "description": "AWS GuardDuty for Patrol",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test tape test/*.test.js test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/patrol-rules-guardduty.git"
+  },
+  "author": "Mapbox, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/patrol-rules-guardduty/issues"
+  },
+  "homepage": "https://github.com/mapbox/patrol-rules-guardduty#readme",
+  "dependencies": {
+    "@mapbox/lambda-cfn": "^2.0.0",
+    "aws-sdk": "^2.147.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "nock": "^9.1.0",
+    "tape": "^4.8.0"
+  }
+}
