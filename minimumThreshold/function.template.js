@@ -1,3 +1,5 @@
+'use strict';
+
 const lambdaCfn = require('@mapbox/lambda-cfn');
 
 module.exports = lambdaCfn.build({

@@ -1,18 +1,19 @@
-const lambdaCfn = require('@mapbox/lambda-cfn');
+'use strict';
+
 const AWS = require('aws-sdk');
 
 module.exports.fn = function(event, context, callback) {
   const options = {
     dispatchSnsArn: process.env.dispatchSnsArn,
     serviceId: process.env.pagerdutyServiceId
-  }
+  };
   if (event.detail.severity >= process.env.minimumThresholdValue) {
     sendDispatchMessage(event, options, (err, res) => {
       if (err) return callback(err);
       return callback(null, res);
-    })
+    });
   } else {
-    callback(null, 'Event did not meet minimum threshold requirement.')
+    callback(null, 'Event did not meet minimum threshold requirement.');
   }
 };
 
