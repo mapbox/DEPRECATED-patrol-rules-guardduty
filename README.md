@@ -17,11 +17,21 @@ A set of [Patrol functions](https://github.com/mapbox/patrol) for AWS GuardDuty.
 
 ## Deploying to AWS
 
+## Prequisites
+
+To deploy patrol-rules-guardduty, you'll need to install [lambda-cfn](https://github.com/mapbox/lambda-cfn/) locally as well as setup and deploy [Dispatch](https://github.com/mapbox/dispatch#set-up) on your AWS infrastructure.
+
 This project uses [lambda-cfn](https://github.com/mapbox/lambda-cfn/) to manage and deploy [AWS CloudFormation](https://aws.amazon.com/cloudformation/) templates. Check out the [lambda-cfn](https://github.com/mapbox/lambda-cfn) and [Patrol](https://github.com/mapbox/patrol) README's for instructions on how to use [lambda-cfn](https://github.com/mapbox/lambda-cfn) with [Patrol](https://github.com/mapbox/patrol) projects.
+
+### Install lambda-cfn
+
+To install lambda-cfn on your machine, run `npm install -g @mapbox/lambda-cfn`.
+
+More instructions are available in the [lambda-cfn README](https://github.com/mapbox/lambda-cfn#installation).
 
 ### Deploy Dispatch
 
-We recommend you send patrol-rules-guardduty alerts to [Dispatch](https://github.com/mapbox/dispatch) for processing. Check out the [Dispatch setup instructions](https://github.com/mapbox/dispatch#set-up) for more information.
+Check out the [Dispatch setup instructions](https://github.com/mapbox/dispatch#set-up) for detailed instructions on how to deploy Dispatch to your AWS infrastructure.
 
 ### Deploy patrol-rules-guardduty functions 
 
@@ -34,6 +44,8 @@ git clone git@github.com:mapbox/patrol-rules-guardduty.git
 cd patrol-rules-guardduty/minimumThreshold
 lambda-cfn create dev
 ```
+
+Lambda-cfn will ask for parameter values when creating new CloudFormation stacks. Check out the guide to [lambda-cfn parameter values](https://github.com/mapbox/lambda-cfn#providing-parameter-values) and the [functions section](#Functions) for help.
 
 ## Local Development
 
