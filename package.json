@@ -15,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/mapbox/patrol-rules-guardduty.git"
   },
-  "author": "Mapbox, Inc.",
-  "license": "ISC",
+  "author": "Mapbox",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/mapbox/patrol-rules-guardduty/issues"
   },
