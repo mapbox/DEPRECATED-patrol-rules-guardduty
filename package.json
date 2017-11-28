@@ -1,10 +1,15 @@
 {
   "name": "patrol-rules-guardduty",
   "version": "0.0.0",
-  "description": "AWS GuardDuty for Patrol",
+  "description": "Patrol functions for AWS GuardDuty",
+  "engines": {
+    "node": "6.10.3"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test tape test/*.test.js test/**/*.test.js"
+    "test": "eslint -c .eslintrc.js *.js **/*.js && NODE_ENV=test tape test/*.test.js test/**/*.test.js",
+    "lint": "eslint -c .eslintrc.js *.js **/*.js",
+    "unit-test": "NODE_ENV=test tape test/*.test.js test/**/*.test.js"
   },
   "repository": {
     "type": "git",
