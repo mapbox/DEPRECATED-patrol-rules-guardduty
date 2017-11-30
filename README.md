@@ -1,6 +1,6 @@
 # patrol-rules-guardduty
 
-[![Build Status](https://travis-ci.com/mapbox/patrol-rules-guardduty.svg?token=cq49erYn5z51L7uuEijr&branch=master)](https://travis-ci.com/mapbox/patrol-rules-guardduty)
+[![Build Status](https://travis-ci.org/mapbox/patrol-rules-guardduty.svg?branch=master)](https://travis-ci.org/mapbox/patrol-rules-guardduty)
 
 A set of [Patrol functions](https://github.com/mapbox/patrol) for AWS GuardDuty. Patrol-rules-guardduty publishes SNS messages to [Dispatch](https://github.com/mapbox/dispatch) for interactive alarm routing.
 
