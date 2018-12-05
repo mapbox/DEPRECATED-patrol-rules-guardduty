@@ -2,7 +2,7 @@
 
 const lambdaCfn = require('@mapbox/lambda-cfn');
 
-module.exports = lambdaCfn.build({
+const lambdaTemplate = lambdaCfn.build({
   name: 'minimumThreshold',
   parameters: {
     dispatchSnsArn: {
@@ -35,3 +35,13 @@ module.exports = lambdaCfn.build({
     }
   }
 });
+
+delete lambdaTemplate.Parameters.CodeS3Bucket;
+delete lambdaTemplate.Parameters.CodeS3Prefix;
+delete lambdaTemplate.Resources.minimumThreshold.Properties.Environment.Variables.CodeS3Bucket;
+delete lambdaTemplate.Resources.minimumThreshold.Properties.Environment.Variables.CodeS3Prefix;
+
+lambdaTemplate.Resources.minimumThreshold.Properties.Code.S3Bucket = cf.join('-', ['utility', cf.accountId, cf.region]);
+lambdaTemplate.Resources.minimumThreshold.Properties.Code.S3Key = cf.join('', ['bundles/patrol-rules-guardduty/', cf.ref('GitSha'), '.zip']);
+
+module.exports = lambdaTemplate;
