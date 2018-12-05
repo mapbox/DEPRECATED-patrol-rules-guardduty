@@ -1,6 +1,7 @@
 'use strict';
 
 const lambdaCfn = require('@mapbox/lambda-cfn');
+const cf = require('@mapbox/cloudfriend');
 
 const lambdaTemplate = lambdaCfn.build({
   name: 'minimumThreshold',
