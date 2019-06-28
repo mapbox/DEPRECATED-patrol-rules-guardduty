@@ -12,7 +12,7 @@ AWS.config.update({
   'secretAccessKey': 'fakeSecretAccessKey'
 });
 
-process.env.dispatchSnsArn = 'arn:aws:sns:us-east-1:11111:dispatch-incoming';
+process.env.DispatchSnsArn = 'arn:aws:sns:us-east-1:11111:dispatch-incoming';
 process.env.pagerdutyServiceId = 'TEST';
 process.env.minimumThresholdValue = 4;
 
@@ -35,7 +35,7 @@ tape('Meets threshold; sends to dispatch', t => {
     .reply(200, "<PublishResponse xmlns=\"http://sns.amazonaws.com/doc/2010-03-31/\">\n  <PublishResult>\n    <MessageId>test-data-test</MessageId>\n  </PublishResult>\n  <ResponseMetadata>\n    <RequestId>test-data-test</RequestId>\n  </ResponseMetadata>\n</PublishResponse>\n");
 
   minimumThreshold.fn(event, {}, (err, res) => {
-    t.error(err, 'does not error')
+    t.error(err, 'does not error');
     t.deepEqual(metadataResponse, res, 'message sent to Dispatch');
     t.end();
   });
@@ -55,7 +55,7 @@ tape('Does not meet threshold; no dispatch', t => {
     .reply(200);
 
   minimumThreshold.fn(event, {}, (err, res) => {
-    t.error(err, 'does not error')
+    t.error(err, 'does not error');
     t.deepEqual('Event did not meet minimum threshold requirement.', res, 'message not sent to Dispatch');
     t.end();
   });
