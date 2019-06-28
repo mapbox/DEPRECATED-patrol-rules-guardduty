@@ -20,7 +20,7 @@ const lambdaTemplate = lambdaCfn.build({
       Effect: 'Allow',
       Action: 'sns:Publish',
       Resource: {
-        Ref: 'dispatchSnsArn'
+        Ref: 'DispatchSnsArn'
       }
     }
   ],
