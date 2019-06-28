@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Patrol functions for AWS GuardDuty",
   "engines": {
-    "node": "6.10.3"
+    "node": ">=10.13.0"
   },
   "main": "index.js",
   "scripts": {
