@@ -33,7 +33,7 @@ More instructions are available in the [lambda-cfn README](https://github.com/ma
 
 Check out the [Dispatch setup instructions](https://github.com/mapbox/dispatch#set-up) for detailed instructions on how to deploy Dispatch to your AWS infrastructure.
 
-### Deploy patrol-rules-guardduty functions 
+### Deploy patrol-rules-guardduty functions
 
 Use [lambda-cfn](https://github.com/mapbox/lambda-cfn) to deploy each patrol-rules-guardduty function. Each AWS Lambda function is its own AWS CloudFormation stack.
 
@@ -48,16 +48,6 @@ lambda-cfn create dev
 Lambda-cfn will ask for parameter values when creating new CloudFormation stacks. Check out the guide to [lambda-cfn parameter values](https://github.com/mapbox/lambda-cfn#providing-parameter-values) and the [functions section](#Functions) for help.
 
 ## Local Development
-
-### Installation
-
-Patrol-rules-guardduty uses Node 6.10.3 on the [AWS Lambda runtime environment](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html).
-
-```sh
-git clone git@github.com:mapbox/patrol-rules-guardduty.git
-cd patrol-rules-guardduty
-npm install
-```
 
 ### Tests
 
