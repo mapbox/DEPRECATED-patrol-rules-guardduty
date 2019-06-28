@@ -4,7 +4,6 @@ const AWS = require('aws-sdk');
 
 module.exports.fn = function(event, context, callback) {
   const options = {
-    dispatchSnsArn: process.env.dispatchSnsArn,
     serviceId: process.env.pagerdutyServiceId
   };
   if (event.detail.severity >= process.env.minimumThresholdValue) {
@@ -31,7 +30,7 @@ function sendDispatchMessage(event, options, callback) {
   };
   const params = {
     Message: JSON.stringify(msg),
-    TopicArn: options.dispatchSnsArn
+    TopicArn: process.env.DispatchSnsArn
   };
   sns.publish(params, function(err,data) {
     if (err) return callback(err);

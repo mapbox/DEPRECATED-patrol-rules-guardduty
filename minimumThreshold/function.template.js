@@ -6,10 +6,6 @@ const lambdaTemplate = lambdaCfn.build({
   name: 'minimumThreshold',
   handler: 'minimumThreshold/function.fn',
   parameters: {
-    dispatchSnsArn: {
-      Type: 'String',
-      Description: 'Dispatch SNS ARN'
-    },
     pagerdutyServiceId: {
       Type: 'String',
       Description: 'PagerDuty Service ID'
