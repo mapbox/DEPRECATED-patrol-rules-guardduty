@@ -1,3 +1,5 @@
+:warning: DEPRECATED :warning:
+
 # patrol-rules-guardduty
 
 [![Build Status](https://travis-ci.org/mapbox/patrol-rules-guardduty.svg?branch=master)](https://travis-ci.org/mapbox/patrol-rules-guardduty)
